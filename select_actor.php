@@ -8,10 +8,9 @@ include 'dbconfig.php';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="sidebar.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    
     
     <?php
     $rowperpage = 50;
@@ -106,7 +105,13 @@ include 'dbconfig.php';
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-12">
-            <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Database</a>
+            
+            <div class="type-1">
+    <a href="#menu-toggle" class="btn-3 btnstyle" id="menu-toggle">
+      <span class="txt">Database</span>
+      <span class="round"><i class="fa fa-chevron-right"></i></span>
+    </a>
+            </div>
               </div>
         </div>
       </div>
@@ -143,12 +148,12 @@ include 'dbconfig.php';
         </form>
     </div>
         <div class="row" style="margin-left:20px;">
-        <button class="btn btn-default"id="show">Update</button>
-        <button class="btn btn-default"id="open">Delete</button>
-        <button class="btn btn-default"id="display">Insert</button>
+        <button class="btn btn-3"id="show">Update</button>
+        <button class="btn btn-3"id="open">Delete</button>
+        <button class="btn btn-3"id="display">Insert</button>
         </div>
     <br>
-    <div class="limiter">
+    
         <div class="table100">
     <table >
         <thead>
@@ -188,8 +193,8 @@ include 'dbconfig.php';
         <div id="div_pagination">
             <input type="hidden" name="row" value="<?php echo $row; ?>">
             <input type="hidden" name="allcount" value="<?php echo $allcount; ?>">
-            <input type="submit" class="btn btn-default" name="but_prev" value="Previous">
-            <input type="submit" class="btn btn-default" name="but_next" value="Next">
+            <input type="submit" class="btn btn-3" name="but_prev" value="Previous">
+            <input type="submit" class="btn btn-3" name="but_next" value="Next">
         </div>
     </form>
 
@@ -223,9 +228,6 @@ include 'dbconfig.php';
     }
 ?>
 
-    
-        
-        </div>
         </div>
     <!-- /#page-content-wrapper -->
 
@@ -233,9 +235,11 @@ include 'dbconfig.php';
 
 </body>
 </html>
-<script src="js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
     $("#menu-toggle").click(function(e) {
   e.preventDefault();
