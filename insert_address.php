@@ -1,16 +1,16 @@
 <?php
 
-include_once("dbconfig.php");
-if(isset($_POST['insert']))
-{
-    $address = $_POST['address'];
-    $address2 = $_POST['address2'];
-    $district = $_POST['district'];
-    $city_id = $_POST['city_id'];
-    $postal_code = $_POST['postal_code'];
-    $phone = $_POST['phone'];
-    if($conn->query("INSERT INTO address VALUES (NULL,'$address','$address2','$district','$city_id','$postal_code','$phone',CURRENT_TIMESTAMP)")) {
-        echo "<meta http-equiv='refresh' content='0;url=select_address.php'>";
-    }
-}
-?>
+require_once 'dbconfig.php';
+
+$tableName = filter_input(INPUT_POST, 'tableName');
+$address = filter_input(INPUT_POST, 'address');
+$address2 = filter_input(INPUT_POST, 'address2');
+$district = filter_input(INPUT_POST, 'district');
+$city_id = filter_input(INPUT_POST, 'city_id');
+$postal_code = filter_input(INPUT_POST, 'postal_code');
+$phone = filter_input(INPUT_POST, 'phone');
+
+$sql = "INSERT INTO $tableName VALUES (NULL, \"$address\", \"$address2\", \"$district\", \"$city_id\", \"$postal_code\", \"$phone\", CURRENT_TIMESTAMP)";
+mysqli_query($conn, $sql);
+
+echo "<meta http-equiv=\"refresh\" content=\"0; url=$tableName.php\">";

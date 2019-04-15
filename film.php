@@ -14,7 +14,7 @@ include_once 'pagination.php';
                 ?>
         <!-- Page Content -->
     
-        <div id="page-content-wrapper">         
+        <div id="page-content-wrapper">      
         
         <div class="animated fadeInLeft mobile-btn">
         <input type="submit" class="btn btn-3" data-toggle="modal" data-target="#insertModal" value="New">
@@ -22,7 +22,7 @@ include_once 'pagination.php';
         <input type="submit" class="btn btn-3" form="updateDeleteForm" value="Delete">
         </div>
         
-        <table class="rental" id="<?php echo $tableName ?>">
+        <table class="film" id="<?php echo $tableName ?>">
             <tbody id="headerFilter"></tbody>
             <tbody id="data"></tbody>
         </table>
@@ -45,13 +45,29 @@ include_once 'pagination.php';
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form id="insertForm" action="insert_rental.php" method="POST">
+                        <form id="insertForm" action="insert_film.php" method="POST">
                             <input type="hidden" name="tableName" value="<?php echo $tableName; ?>">
-                            Rental Date: <input type="datetime-local" step="1" name="rental_date"><br><br>
-                            Inventory ID: <input type="number" name="inventory_id"><br><br>
-                            Customer ID: <input type="number" name="customer_id"><br><br>
-                            Return Date: <input type="datetime-local" step="1" name="return_date"><br><br>
-                            Staff ID: <input type="number" name="staff_id"><br><br>
+                            Title: <input type="text" name="title"><br><br>
+                            Release Year: <input type="number" name="release_year"><br><br>
+                            Language ID: <input type="number" name="language_id"><br><br>
+                            Original Language ID: <input type="number" name="original_language_id"><br><br>
+                            Rental Duration: <input type="number" name="rental_duration"><br><br>
+                            Rental Rate: <input type="number" step="0.01" name="rental_rate"><br><br>
+                            Length: <input type="number" name="length"><br><br>
+                            Replacement Cost: <input type="number" step="0.01" name="replacement_cost"><br><br>
+                            Rating: <select name="rating">
+                                <option value="G">G</option>
+                                <option value="PG">PG</option>
+                                <option value="PG-13">PG-13</option>
+                                <option value="R">R</option>
+                                <option value="NC-17">NC-17</option>
+                            </select><br><br>
+                            Special Features: <select name="special_features">
+                                <option value="Trailers">Trailers</option>
+                                <option value="Commentaries">Commentaries</option>
+                                <option value="Deleted Scenes">Deleted Scenes</option>
+                                <option value="Behind the Scenes">Behind the Scenes</option>
+                            </select><br><br>
                             <input type="submit" value="Insert">
                         </form>
                     </div>

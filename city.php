@@ -22,7 +22,7 @@ include_once 'pagination.php';
         <input type="submit" class="btn btn-3" form="updateDeleteForm" value="Delete">
         </div>
         
-        <table class="rental" id="<?php echo $tableName ?>">
+        <table class="city" id="<?php echo $tableName ?>">
             <tbody id="headerFilter"></tbody>
             <tbody id="data"></tbody>
         </table>
@@ -45,13 +45,10 @@ include_once 'pagination.php';
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form id="insertForm" action="insert_rental.php" method="POST">
+                        <form id="insertForm" action="insert_city.php" method="POST">
                             <input type="hidden" name="tableName" value="<?php echo $tableName; ?>">
-                            Rental Date: <input type="datetime-local" step="1" name="rental_date"><br><br>
-                            Inventory ID: <input type="number" name="inventory_id"><br><br>
-                            Customer ID: <input type="number" name="customer_id"><br><br>
-                            Return Date: <input type="datetime-local" step="1" name="return_date"><br><br>
-                            Staff ID: <input type="number" name="staff_id"><br><br>
+                            City: <input type="text" name="city"><br><br>
+                            Country ID: <input type="number" name="country_id"><br><br>
                             <input type="submit" value="Insert">
                         </form>
                     </div>

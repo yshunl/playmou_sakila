@@ -14,7 +14,7 @@ include_once 'pagination.php';
                 ?>
         <!-- Page Content -->
     
-        <div id="page-content-wrapper">         
+        <div id="page-content-wrapper">   
         
         <div class="animated fadeInLeft mobile-btn">
         <input type="submit" class="btn btn-3" data-toggle="modal" data-target="#insertModal" value="New">
@@ -22,7 +22,7 @@ include_once 'pagination.php';
         <input type="submit" class="btn btn-3" form="updateDeleteForm" value="Delete">
         </div>
         
-        <table class="rental" id="<?php echo $tableName ?>">
+        <table class="payment" id="<?php echo $tableName ?>">
             <tbody id="headerFilter"></tbody>
             <tbody id="data"></tbody>
         </table>
@@ -45,13 +45,13 @@ include_once 'pagination.php';
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form id="insertForm" action="insert_rental.php" method="POST">
+                        <form id="insertForm" action="insert_payment.php" method="POST">
                             <input type="hidden" name="tableName" value="<?php echo $tableName; ?>">
-                            Rental Date: <input type="datetime-local" step="1" name="rental_date"><br><br>
-                            Inventory ID: <input type="number" name="inventory_id"><br><br>
                             Customer ID: <input type="number" name="customer_id"><br><br>
-                            Return Date: <input type="datetime-local" step="1" name="return_date"><br><br>
                             Staff ID: <input type="number" name="staff_id"><br><br>
+                            Rental ID: <input type="number" name="rental_id"><br><br>
+                            Amount: <input type="number" step="0.01" name="amount"><br><br>
+                            Payment Date: <input type="datetime-local" step="1" name="payment_date"><br><br>
                             <input type="submit" value="Insert">
                         </form>
                     </div>

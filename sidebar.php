@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="sidebar.css">
-        <link rel="stylesheet" href="style.css">
-
-
-    </head>
     <body>
-        <div id="wrapper" class="toggled">
 
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
@@ -21,56 +11,56 @@
                     </a>
         </li>
         <li>
-        <a href="select_actor.php">Actor</a>
+        <a href="actor.php">Actor</a>
         </li>
         <li>
-        <a href="select_address.php">Address</a>
+        <a href="address.php">Address</a>
         </li>
         <li>
-        <a href="select_category.php">Category</a>
+        <a href="category.php">Category</a>
         </li>
         <li>
-        <a href="select_city.php">City</a>
+        <a href="city.php">City</a>
         </li>
         <li>
-        <a href="select_country.php">Country</a>
+        <a href="country.php">Country</a>
         </li>
         <li>
-        <a href="select_customer.php">Customer</a>
+        <a href="customer.php">Customer</a>
         </li>
         <li>
-        <a href="select_film.php">Film</a>
+        <a href="film.php">Film</a>
         </li>
          <li>
-        <a href="select_film_actor.php">Film Actor</a>
+        <a href="film_actor.php">Film Actor</a>
         </li>
          <li>
-        <a href="select_film_category.php">Film Category</a>
+        <a href="film_category.php">Film Category</a>
         </li>
          <li>
-        <a href="select_film_text.php">Film Text</a>
+        <a href="film_text.php">Film Text</a>
         </li>
          <li>
-        <a href="select_inventory.php">Inventory</a>
+        <a href="inventory.php">Inventory</a>
         </li>
          <li>
-        <a href="select_language.php">Language</a>
+        <a href="language.php">Language</a>
         </li>
          <li>
-        <a href="select_payment.php">Payment</a>            
+        <a href="payment.php">Payment</a>            
         </li>
         <li>
-        <a href="select_rental.php">Rental</a>
+        <a href="rental.php">Rental</a>
         </li>
         <li>
-        <a href="select_staff.php">Staff</a>
+        <a href="staff.php">Staff</a>
         </li>
         <li>
-        <a href="select_store.php">Store</a>
+        <a href="store.php">Store</a>
         </li>
-        <li>
-        <a href="dropDownSearch.php">Search</a>
-        </li>
+        <!--<li>-->
+        <!--<a href="dropDownSearch.php">Search</a>-->
+        <!--</li>-->
       </ul>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -80,14 +70,26 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-12">
-            <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Database</a>
-            <h2>HIIII</h2>
-            <?php
+            
+            <div class="type-1">
+    <a href="#menu-toggle" class="btn-3 btnstyle animated slideInLeft" id="menu-toggle">
+      <span class="txt">Database</span>
+      <span class="round"><i class="fa fa-chevron-right"></i></span>
+    </a>
+            </div>
+              </div>
+        </div>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  <!-- /#wrapper -->
+      <?php
     // takes in result from mysqli_query($conn, $sql) and returns a table
     // for the SQL query
     // added $table parameter for table class/ id
     // $table can be left empty, will return default table style
-    function returnTable($result, $table)
+    /*function returnTable($result, $table)
     {
         $col = array_keys($result->fetch_assoc());
     
@@ -109,23 +111,12 @@
             echo "</tr>";
         }
         echo "</table>";
-    }
+    }*/
 ?>
-
-    
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /#page-content-wrapper -->
-
-  </div>
-  <!-- /#wrapper -->
 
  
 
   <!-- Bootstrap Core JavaScript -->
-  <script src="js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
