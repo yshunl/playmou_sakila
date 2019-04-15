@@ -14,15 +14,15 @@ include_once 'pagination.php';
                 ?>
         <!-- Page Content -->
     
-        <div id="page-content-wrapper">         
+        <div id="page-content-wrapper">     
         
         <div class="animated fadeInLeft mobile-btn">
         <input type="submit" class="btn btn-3" data-toggle="modal" data-target="#insertModal" value="New">
         <input type="submit" class="btn btn-3" form="updateDeleteForm" value="Edit">
         <input type="submit" class="btn btn-3" form="updateDeleteForm" value="Delete">
         </div>
-        
-        <table class="rental" id="<?php echo $tableName ?>">
+
+        <table class="language" id="<?php echo $tableName ?>">
             <tbody id="headerFilter"></tbody>
             <tbody id="data"></tbody>
         </table>
@@ -45,13 +45,9 @@ include_once 'pagination.php';
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form id="insertForm" action="insert_rental.php" method="POST">
+                        <form id="insertForm" action="insert_language.php" method="POST">
                             <input type="hidden" name="tableName" value="<?php echo $tableName; ?>">
-                            Rental Date: <input type="datetime-local" step="1" name="rental_date"><br><br>
-                            Inventory ID: <input type="number" name="inventory_id"><br><br>
-                            Customer ID: <input type="number" name="customer_id"><br><br>
-                            Return Date: <input type="datetime-local" step="1" name="return_date"><br><br>
-                            Staff ID: <input type="number" name="staff_id"><br><br>
+                            Name: <input type="text" name="name"><br><br>
                             <input type="submit" value="Insert">
                         </form>
                     </div>
